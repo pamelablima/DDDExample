@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "70JdHG7CVflklSmnwW7LoL6cZ+Jq0QF9Uaz+GD1VWZ5YM4fDPakHcKNgiSaMyFzFs75CoWuEylKpHYGNPHRAvA==",
+  "dgSpecHash": "c3LJdF3ECM0h8UWkuqyX/B24QWo9uWKM/WQBaGclun6TSZUWU97TCe6Np5/UFQrfQfvVp86vLMR9VkVO2E7TmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\OneDrive\\Application\\Application\\Infraestructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\application\\DDD-Example-master\\Infraestructure\\Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

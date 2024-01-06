@@ -16,5 +16,6 @@ namespace Domain.Commands
         public string Estado { get; set; }
         public EMontadora Montadora { get; set; }
         public bool Alugado { get; set; }
+        public object ETipoVeiculo { get; set; }
     }
 }

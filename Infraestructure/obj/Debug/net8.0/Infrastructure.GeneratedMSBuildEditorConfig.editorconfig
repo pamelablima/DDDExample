@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Infrastructure
-build_property.ProjectDir = C:\Users\HP\OneDrive\Application\Application\Infraestructure\
+build_property.ProjectDir = C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
