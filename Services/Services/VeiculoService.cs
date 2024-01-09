@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Services.Services
 {
-    public class VeiculosService : IVeiculoService //aqui herda a interface "IVeiculosServices"
+    public class VeiculoService : IVeiculoService //aqui herda a interface "IVeiculosServices"
     {
         public void GetAsync()
         {

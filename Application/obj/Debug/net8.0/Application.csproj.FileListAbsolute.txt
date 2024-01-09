@@ -42,7 +42,6 @@ C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\
 C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
-C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\net8.0\Application.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\net8.0\Application.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\net8.0\Application.sourcelink.json
 C:\Users\DELL\source\repos\application\DDD-Example-master\Application\obj\Debug\net8.0\Application.dll
