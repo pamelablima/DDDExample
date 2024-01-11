@@ -22,3 +22,7 @@ C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\obj\De
 C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\obj\Debug\net8.0\refint\Infrastructure.dll
 C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\bin\Debug\net8.0\Domain.dll
+C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\bin\Debug\net8.0\Domain.pdb
+C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\application\DDD-Example-master\Infraestructure\obj\Debug\net8.0\Infrastructure.csproj.CopyComplete

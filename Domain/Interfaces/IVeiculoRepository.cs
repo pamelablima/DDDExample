@@ -1,4 +1,5 @@
-﻿using Domain.Entidades;
+﻿using Domain.Commands;
+using Domain.Entidades;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Domain.Interfaces
     public interface IVeiculoRepository
     {
         
-        Task<string> PostAsync(IVeiculoCommand command);
+        Task<string> PostAsync(VeiculoCommand command);
 
         void PostAsync();
         void GetAsync();

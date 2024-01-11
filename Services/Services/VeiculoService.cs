@@ -12,6 +12,12 @@ namespace Services.Services
 {
     public class VeiculoService : IVeiculoService //aqui herda a interface "IVeiculosServices"
     {
+        private readonly IVeiculoRepository _repository;
+
+        public VeiculoService(IVeiculoRepository repository)
+        {
+            _repository = repository;
+        }
         public void GetAsync()
         {
             throw new NotImplementedException();
@@ -38,8 +44,7 @@ namespace Services.Services
 
                 return "O tipo de veiculo não é permitido";
 
-            return "Cadastro Realizado com sucesso";
-
+            return await _repository.PostAsync(command);
 
         }
 
