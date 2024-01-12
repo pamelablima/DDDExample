@@ -14,19 +14,12 @@ namespace Application.Controllers
         {
             _veiculoService = veiculoService;
         }
-
+        #region Post
         [HttpPost]
-        [Route("CadastrarVeiculos")]
+        [Route("CadastrarVeiculo")]
         public async Task<IActionResult> PostAsync([FromBody] VeiculoCommand command)
         {
-            await _veiculoService.PostAsync(command);
             return Ok(await _veiculoService.PostAsync(command));
-        }
-        [HttpGet]
-        [Route("SimularAluguel")]
-        public IActionResult GetAsync() 
-        {
-            return Ok();
         }
         [HttpPost]
         [Route("Alugar")]
@@ -34,5 +27,14 @@ namespace Application.Controllers
         {
             return Ok();
         }
+        #endregion
+
+        [HttpGet]
+        [Route("SimularAluguel")]
+        public IActionResult GetAsync()
+        {
+            return Ok();
+        }
+
     }
 }

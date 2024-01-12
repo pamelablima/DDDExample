@@ -1,33 +1,30 @@
 ﻿using Dapper;
 using Domain.Commands;
-using Domain.Entidades;
 using Domain.Interfaces;
-using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
 
 namespace Infrastructure.Repository
 {
     public class VeiculoRepository : IVeiculoRepository
     {
-        private string conexao = @"Server=(localdb)\mssqllocaldb;Database=AluguelVeiculos;Trusted_Connection=True;MultipleActiveResultSets=True";
+        string conexao = @"Server=(localdb)\mssqllocaldb;Database=AluguelVeiculos;Trusted_Connection=True;MultipleActiveResultSets=true";
         public async Task<string> PostAsync(VeiculoCommand command)
         {
-
             string queryInsert = @"
-            INSERT INTO Veiculo(Placa,  AnoFabricação,  TipoVeiculoId,  Estado,  MontadoraId)
-            VALUES (@Placa, @AnoFabricação, @TipoVeiculoId, @Estado, @MontadoraId)";
-
+            INSERT INTO Veiculo(Placa, AnoFabricação, TipoVeiculoId, Estado, MontadoraId)
+            VALUES(@Placa,@AnoFabricacao , @TipoVeiculoId, @Estado, @MontadoraId)";
             using (SqlConnection conn = new SqlConnection(conexao))
             {
-                conn.Execute(queryInsert, new {
+                conn.Execute(queryInsert, new
+                {
                     Placa = command.Placa,
-                    AnoFabricação = command.AnoFabricacao,  
+                    AnoFabricacao = command.AnoFabricacao,
                     TipoVeiculoId = (int)command.TipoVeiculo,
                     Estado = command.Estado,
                     MontadoraId = (int)command.Montadora
-
                 });
 
-                return "Veiculo cadastrado com sucesso";
+                return "Veiculo Cadastrado com sucesso";
             }
         }
 
@@ -39,11 +36,5 @@ namespace Infrastructure.Repository
         {
 
         }
-
-        public Task<string> PostAsync(IVeiculoCommand command)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

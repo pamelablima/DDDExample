@@ -1,6 +1,7 @@
 using Domain.Interfaces;
 using Infrastructure.Repository;
-using Services.Services;
+using Service.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
