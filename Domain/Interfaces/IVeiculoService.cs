@@ -1,4 +1,6 @@
 ﻿using Domain.Commands;
+using Domain.Enums;
+using Domain.ViewModel;
 
 namespace Domain.Interfaces
 {
@@ -11,7 +13,7 @@ namespace Domain.Interfaces
         Task<string> PostAsync(VeiculoCommand command);
         void PostAsync();
         void GetAsync();
-        Task<IEnumerable<VeiculoCommand>> GetVeiculosAlugadoAsync();
-
+        Task<IEnumerable<VeiculoCommand>> GetVeiculosDisponiveis();
+        Task<SimularVeiculoAluguelViewModel> SimularVeiculoAluguel(int TotalDiasSimulado, ETipoVeiculo tipoVeiculo);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Domain.Commands;
+using Domain.Enums;
 using Domain.Interfaces;
 using System.Data.SqlClient;
 
@@ -11,7 +12,7 @@ namespace Infrastructure.Repository
         public async Task<string> PostAsync(VeiculoCommand command)
         {
             string queryInsert = @"
-            INSERT INTO Veiculo(Placa, AnoFabricação, TipoVeiculoId, Estado, MontadoraId)
+            INSERT INTO Veiculo(Placa, AnoFabricacao, TipoVeiculoId, Estado, MontadoraId)
             VALUES(@Placa,@AnoFabricacao , @TipoVeiculoId, @Estado, @MontadoraId)";
             using (SqlConnection conn = new SqlConnection(conexao))
             {
@@ -35,6 +36,31 @@ namespace Infrastructure.Repository
         public void GetAsync()
         {
 
+        }
+
+        public async Task<IEnumerable<VeiculoCommand>> GetVeiculosDisponiveis()
+        {
+            string queryBuscarVeiculosDisponiveis = @"
+               SELECT * FROM Veiculo WHERE ALUGADO = 0";
+            using (SqlConnection conn = new SqlConnection(conexao))
+            {
+                return conn.QueryAsync<VeiculoCommand>(
+                    queryBuscarVeiculosDisponiveis).Result.ToList();
+            }
+        }
+        public async Task<VeiculoPrecoCommand> GetPrecoDiaria(ETipoVeiculo tipoVeiculo)
+        {
+            string queryGetPrecoDiaria = @"SELECT * FROM VeiculoPreco
+                                           WHERE TIPOVEICULO = @TIPOVEICULO";
+
+            using (SqlConnection conn = new SqlConnection(conexao))
+            {
+                return conn.QueryAsync<VeiculoPrecoCommand>(queryGetPrecoDiaria, new
+                {
+                    TipoVeiculo = tipoVeiculo
+                }).Result.FirstOrDefault();
+
+            }
         }
     }
 }
